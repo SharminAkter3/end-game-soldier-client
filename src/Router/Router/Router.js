@@ -14,12 +14,12 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/posts')
+                loader: () => fetch('https://y-eight-pi.vercel.app/posts')
             },
             {
                 path: '/posts/:id',
                 element: <PostDetails></PostDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/posts/${params.id}`)
+                loader: ({ params }) => fetch(`https://y-eight-pi.vercel.app/posts/${params.id}`)
             },
             {
                 path: '/media',
